@@ -1,0 +1,332 @@
+@charset "utf-8";
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: 'Pretendard','맑은 고딕', 돋움, sans-serif;
+    text-align:center;
+}
+body h3 {
+    font-weight: 700;
+    font-size: 3em;
+    text-transform: capitalize;
+}
+/* -----헤더----- */
+header nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+}
+header nav #gnb {
+    display: flex;
+}
+header nav #gnb li {
+    display: inline-block;
+    text-align: center;
+}
+header nav #gnb li > a {
+    display: block;
+    margin: 0 0;
+    padding: 15px 15px;
+}
+header nav #gnb li .submenu > li > a {
+    display: block;
+
+}
+header nav #gnb li .submenu {
+    display: none;
+    flex-direction: column;
+    padding: 0;
+    position: absolute;
+    border: 1px solid black;
+    box-shadow:
+  3.2px 1.8px 2px rgba(0, 0, 0, 0.009),
+  7.8px 4.4px 4.9px rgba(0, 0, 0, 0.017),
+  14.7px 8.3px 9.1px rgba(0, 0, 0, 0.022),
+  26.1px 14.7px 16.3px rgba(0, 0, 0, 0.025),
+  48.9px 27.6px 30.5px rgba(0, 0, 0, 0.029),
+  117px 66px 73px rgba(0, 0, 0, 0.04)
+; 
+
+}
+#gnb > li:hover .submenu {
+    display: flex;
+}
+.submenu:hover {
+    display: flex;
+}
+.submenu > li:hover > a {
+    background-color: #ddd;
+
+}
+
+header #gnb li:nth-child(5) {
+    font-size: 1em;
+    font-weight: 300;
+}
+header #gnb li:nth-child(6) {
+    font-size: 1em;
+    font-weight: 300;
+}
+header #logo {
+    font-weight: 900;
+    font-size: 1.5em;
+    margin: 10px 20px;
+}
+header #header_image {
+    background:url(./images/header_img.jpg) no-repeat 100% 0 / cover;
+    width: 100%; height: 100vh;
+    text-indent: -9999px;
+}
+
+/* -----main----- */
+main .box1 ul {
+    margin: 100px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+}
+main .box1 ul li {
+    text-align: left;
+    text-transform: capitalize;
+    height: 325px;
+}
+main .box1 ul li:nth-child(odd) {
+    border-right: solid 1px black;
+}
+main .box1 ul li:nth-child(3) {
+    border-top: solid 1px black;
+}
+main .box1 ul li:nth-child(4) {
+    border-top: solid 1px black;
+}
+main .box1 ul li h4 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 50px 35px 25px 35px ;
+}
+main .box1 ul li p {
+    margin: 0 35px 35px 35px;
+}
+main .box2 ul {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr); 
+}
+main .box2 ul li{
+    display: grid;
+    grid-auto-rows: 30vh;
+    text-indent: -9999px;
+}
+
+main .box2 ul li:hover .filter{
+    backdrop-filter: blur(15px);
+}
+main .box2 ul li:nth-child(1) {
+    background: url(./images/box2_img1.jpg) no-repeat 50% 50% / cover;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+main .box2 ul li:nth-child(1) .filter {
+    width: 100%;
+    height: 60vh;
+}
+main .box2 ul li:nth-child(2) {
+    background: url(./images/box2_img2.jpg) no-repeat 50% 50% / cover;
+}
+main .box2 ul li:nth-child(3) {
+    background: url(./images/box2_img3.jpg) no-repeat 50% 50% / cover;
+}
+main .box2 ul li:nth-child(4) {
+    background: url(./images/box2_img4.jpg) no-repeat 50% 50% / cover;
+    grid-column: span 2;
+}
+main .box2 ul li:nth-child(5) {
+    background: url(./images/box2_img5.jpg) no-repeat 50% 50% / cover;
+    grid-column: span 2;
+}
+main .box2 ul li:nth-child(6) {
+    background: url(./images/box2_img6.jpg) no-repeat 50% 50% / cover;
+}
+main .box2 ul li:nth-child(7) {
+    background: url(./images/box2_img7.jpg) no-repeat 50% 50% / cover;
+}
+main .box3 {
+    margin: 50px 100px;
+}
+main .box3 h3 {
+    margin-bottom: 50px;
+}
+main .box3 hr {
+    margin: 0 auto;
+    background-color: black;
+}
+main .box3 p {
+    margin: 35px 0;
+}
+main .box3 .box3_album {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 0 50px;
+}
+main .box3 .box3_album img { 
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+ }
+main .box3 .box3_album figure figcaption h6 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+main .box3 .box3_album figure figcaption p {
+    margin: 10px 0 50px 0;
+}
+main .box4 {
+    background-color: #ddd;
+    padding: 10vh 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main .box4 .box4_txt1 {
+    width: 50%;
+    height: 25vh;
+    text-align: left;
+    
+}
+main .box4 .box4_txt2 {
+    width: 50%;
+    text-align: left;
+    height: 25vh;
+    line-height: 25px;
+}
+main .box4 video {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+main .box5 h3 {
+    margin: 50px;
+}
+main .box5 hr {
+    margin: 0 auto 50px;
+    background-color: black;
+}
+main .box5 .box5_img {
+    margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+main .box5 ul li {
+    width: 20vw;
+    text-align: left;
+    box-shadow:
+    0.7px 1px 2.7px rgba(0, 0, 0, 0.022),
+    1.7px 2.6px 6.9px rgba(0, 0, 0, 0.031),
+    3.4px 5.3px 14.2px rgba(0, 0, 0, 0.039),
+    6.9px 11px 29.2px rgba(0, 0, 0, 0.048),
+    19px 30px 80px rgba(0, 0, 0, 0.07)
+  ;
+    
+}
+main .box5 ul li:hover {
+    transform: scale(1.1);
+
+    transition: all 0.2s linear;
+}
+main .box5 ul li figure img {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .box5 ul li figure figcaption {
+    width: 100%;
+    height: 150px;
+}
+
+main .box5 ul li figcaption h6 {
+    margin: 20px 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+main .box5 ul li figcaption p {
+    margin: 0 10px ;
+}
+
+main .box6 h3 {
+    margin: 70px 0;
+}
+main .box6 .info {
+    display: flex;
+    text-align: left;
+    margin: 0 100px;
+}
+main .box6 .info li {
+    border-bottom: 1px solid black;
+    font-size: 1.1em;
+    padding: 20px 10px;
+}
+main .box6 .info .info_col1 {
+    font-weight: bold;
+    width: 10vw;
+    text-transform: capitalize;
+}
+main .box6 .info .info_col2 {
+    width: 100%;
+}
+main .box6 .info li:nth-child(5) {
+    border-bottom: 3px solid black;
+}
+main .box7 {
+    margin: 100px 0 0;
+    background: url(./images/box7_bg.jpg) no-repeat fixed 0 0 / cover;
+    height: 380px;
+    padding: 50px 0;
+}
+main .box7 h3 {
+    color: white;
+}
+main .box7 p {
+    color: white;
+    line-height: 2;
+}
+main .box7 .contact_us {
+    text-transform: capitalize;
+    margin: 0 auto;
+    border: 2px solid white;
+    width: 130px;
+    padding: 5px;
+    margin-top: 80px;
+}
+main .box7 .contact_us:hover {
+    background-color: white;
+}
+main .box7 .contact_us:hover p{
+    color: pink;
+}
+
+main .box_top {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 3vw; height: 3vw;
+    background-color: #1c1c1c;
+}
+main .box_top span {
+    font-size: 3em;
+    color: white;
+}
+footer {
+    padding: 50px 0;
+}
+footer p{
+    line-height: 2;
+}
